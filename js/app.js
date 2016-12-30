@@ -38,15 +38,17 @@ console.log(customers[1])
 console.log(customers[2])
 
 
-var main = document.createElement("div");
-var divhtml = document.getElementById("main").appendChild(main);
 
 for (i = 0; i < customers.length; i ++) {
-    divhtml.innerHTML = customers[i].id + "<br>" +
-    customers[i].first_name + "<br>" +
-    customers[i].last_name + "<br>" + customers[i].company + "<br>" +
-    customers[i].role + "<br>" + customers[i].phone + "<br>" +
-    customers[i].email + "<br>" + customers[i].description + "<br>" + "<br>";
+
+    var main = document.createElement("div");
+    var divhtml = document.getElementById("main").appendChild(main);
+    main.className="ui";
+    main.classList.add('card');
+    main.innerHTML = "<div class='content'>" + "<h3>" + customers[i].first_name + " " +
+    customers[i].last_name + "</h3>" + "<br>" +
+    "<span class='category'>" + customers[i].role + "</span>" + "<br>" + "<p class='extra content'>" +
+    customers[i].description + "</p>" + "<br>" + "<div class='float right'>" + customers[i].phone + "<br>" + customers[i].email + "</div>" + "</div>";
 }
 
 
@@ -56,7 +58,7 @@ document.getElementById("user2").innerHTML = customers[1].id + "<br>" + customer
 document.getElementById("user3").innerHTML = customers[2].id + "<br>" + customers[2].first_name + "<br>" + customers[2].last_name + "<br>" + customers[2].company + "<br>" + customers[2].role + "<br>" + customers[2].phone + "<br>" + customers[2].email + "<br>" + customers[2].description + "<br>" + "<br>";
 */
 
-
+/*
 document.getElementById("username1").innerHTML = customers[0].first_name + " " + customers[0].last_name;
 document.getElementById("username2").innerHTML = customers[1].first_name + " " + customers[1].last_name;
 document.getElementById("username3").innerHTML = customers[2].first_name + " " + customers[2].last_name;
@@ -69,3 +71,4 @@ document.getElementById("userdef3").innerHTML = customers[2].description;
 document.getElementById("usercoord1").innerHTML = customers[0].email + "<br>" + customers[0].phone;
 document.getElementById("usercoord2").innerHTML = customers[1].email + "<br>" + customers[1].phone;
 document.getElementById("usercoord3").innerHTML = customers[2].email + "<br>" + customers[2].phone;
+*/
